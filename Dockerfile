@@ -4,7 +4,7 @@ RUN apt-get update \
  && apt-get install -y apt-transport-https curl gnupg2
 
 RUN curl -o webmin-setup-repo.sh https://raw.githubusercontent.com/webmin/webmin/master/webmin-setup-repo.sh \
- && sh webmin-setup-repo.sh \
+ && sh webmin-setup-repo.sh --force\
  && rm webmin-setup-repo.sh
 
 RUN apt-get update \
